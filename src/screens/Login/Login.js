@@ -7,7 +7,7 @@ import Box from '@mui/material/Box'
 import { FormControl } from '@material-ui/core';
 import { Input } from '@material-ui/core';
 import { InputLabel } from '@material-ui/core';
-import { FormHelperText } from "@material-ui/core"
+
 
 
 
@@ -113,7 +113,7 @@ export default function Login() {
 
   return (
     <div>
-      <Button variant='contained' onClick={handleOpen}>Open modal</Button>
+      <Button variant='contained' onClick={handleOpen}>Login</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -135,6 +135,7 @@ export default function Login() {
             <FormControl margin="normal" required fullWidth>
               <InputLabel htmlFor="email">Email Address</InputLabel>
               <Input id="email" name="email" placeholder='email' autoFocus required />
+
             </FormControl>
             <FormControl margin="normal" required fullWidth>
               <InputLabel htmlFor="password">Password</InputLabel>
@@ -151,11 +152,11 @@ export default function Login() {
             </span>
 
           </TabPanel>
-         
 
 
 
- <TabPanel value={value} index={1} onSubmit={handleSubmit}>
+
+          <TabPanel value={value} index={1} onSubmit={handleSubmit}>
             <FormControl margin="normal" required fullWidth  >
               <InputLabel htmlFor="firstname">First Name</InputLabel>
               <Input id="name" name="username" value={formValues.username} onChange={handleChange} autoFocus required />
@@ -180,12 +181,14 @@ export default function Login() {
               <Input name="contact" type="number" id="contact" value={formValues.contact} onChange={handleChange} autoComplete="current-contact" required="true" />
 
             </FormControl>
+
+
             <span style={{ display: "flex", alignItems: "center", placeContent: "center " }}>
-              
+
               <Button type='submit' variant="contained" color="primary" >  Register </Button>
             </span>
-              
-          </TabPanel>  
+
+          </TabPanel>
 
         </Box>
 
@@ -194,10 +197,10 @@ export default function Login() {
   );
 }
 
-             
-              
-             
-        
+
+
+
+
 
 
 
